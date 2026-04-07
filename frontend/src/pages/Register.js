@@ -15,7 +15,7 @@ function Register() {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', form);
+      const res = await axios.post('https://project-ai-knowledge.onrender.com/api/auth/register', form);
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       alert('Account created successfully!');
